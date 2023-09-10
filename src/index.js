@@ -1,11 +1,23 @@
 import ReactDOM from "react-dom/client";
 
 const BookList = () => {
-  return <section></section>;
+  return (
+    <section>
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
 };
 
 const Book = () => {
-  return <article></article>;
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
 };
 
 const Image = () => {
