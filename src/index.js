@@ -1,11 +1,25 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 
+const BookList = () => {
+  return <section></section>;
+};
 
-function Greeting() {
-    return <h2>My First Component</h2>;
-}
+const Book = () => {
+  return <article></article>;
+};
+
+const Image = () => {
+  return <h2>Image Placeholder</h2>;
+};
+
+const Title = () => {
+  return <h1>Title</h1>;
+};
+
+const Author = () => {
+  return <h4>Author</h4>;
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Greeting />);
+root.render(<BookList />);
