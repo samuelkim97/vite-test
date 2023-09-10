@@ -13,30 +13,17 @@ const BookList = () => {
 };
 
 const Book = () => {
+  const author = "Walter Isaacson";
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/814mI0-rkxL._AC_UL600_SR600,400_.jpg"
+        alt="Elon Musk"
+      />
+      <h2>Elon Musk</h2>
+      <h4>{author}</h4>
     </article>
   );
-};
-
-const Image = () => {
-  return (
-    <img
-      src="https://images-na.ssl-images-amazon.com/images/I/814mI0-rkxL._AC_UL600_SR600,400_.jpg"
-      alt="Elon Musk"
-    />
-  );
-};
-
-const Title = () => {
-  return <h2>Elon Musk</h2>;
-};
-
-const Author = () => {
-  return <h4>Walter Isaacson</h4>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
