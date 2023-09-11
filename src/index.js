@@ -27,25 +27,31 @@ const books = [
 ];
 
 const BookList = () => {
+  const getBook = (id) => {
+    console.log(books.find((bookObj) => bookObj.id === id));
+  };
+  // console.log(getBook(1));
+
   return (
     <section className="booklist">
       {books.map((book) => {
         const { image, author, title } = book;
-        return <Book {...book} key={book.id} />;
+        return <Book {...book} key={book.id} getBook={getBook} />;
       })}
     </section>
   );
 };
 
 const Book = (props) => {
-  const { image, title, author } = props;
+  const { image, title, author, id, getBook } = props;
+
   return (
     <article className="book">
       <img src={image} alt={title} />
       <h2>{title}</h2>
       <button
         onClick={() => {
-          console.log(title);
+          getBook(id);
         }}
       >
         display title
