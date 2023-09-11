@@ -29,49 +29,10 @@ const books = [
 const BookList = () => {
   return (
     <section className="booklist">
-      <EventExamples />
       {books.map((book) => {
         const { image, author, title } = book;
         return <Book {...book} key={book.id} />;
       })}
-    </section>
-  );
-};
-
-const EventExamples = () => {
-  const handleFormInput = (e) => {
-    console.log(e.target.value);
-    console.log("handle form input");
-  };
-
-  // const handleButtonClick = () => {
-  //   alert("handle button click");
-  // };
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    console.log("form submitted");
-  };
-
-  return (
-    <section>
-      <form onSubmit={handleFormSubmit}>
-        <h2>Typical Form</h2>
-        <input
-          type="text"
-          name="example"
-          onChange={handleFormInput}
-          style={{ margin: "1rem 0" }}
-        />
-      </form>
-      {/* Can use function directly not using reference */}
-      <button
-        onClick={() => {
-          console.log("button clicked");
-        }}
-      >
-        click me
-      </button>
     </section>
   );
 };
@@ -82,6 +43,13 @@ const Book = (props) => {
     <article className="book">
       <img src={image} alt={title} />
       <h2>{title}</h2>
+      <button
+        onClick={() => {
+          console.log(title);
+        }}
+      >
+        display title
+      </button>
       <h4>{author}</h4>
     </article>
   );
