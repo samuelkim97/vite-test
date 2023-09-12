@@ -7,9 +7,9 @@ import Book from "./Book";
 const BookList = () => {
   return (
     <section className="booklist">
-      {books.map((book) => {
+      {books.map((book, index) => {
         const { image, author, title } = book;
-        return <Book {...book} key={book.id} />;
+        return <Book {...book} index={index} key={book.id} />;
       })}
     </section>
   );
