@@ -60,3 +60,9 @@ body {
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+
+.title {
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: capitalize;
+}
